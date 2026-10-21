@@ -44,15 +44,16 @@ The CSV dataset is expected to contain the following columns:
 
 ### 3.2 Illustrative Example
 
-The following examples demonstrate the expected CSV format. They are illustrative and are not claimed to be entries in the actual research dataset.
+The following records illustrate the structure and format of the Amharic implicit sentiment detection dataset.
 
 ```csv
-id,text,label,label_id
-1,"የምር በጣም ጥሩ ነው።",Positive,2
-2,"እንደጠበቅኩት አልሆነም።",Negative,0
+id,text_am,sentiment_label,split
+AMIS0001,የተላከው ፋይል ሲያስፈልገኝ በቀላሉ አገኘሁት።,Positive,test
+AMIS0002,የጠየቅሁት እርዳታ ከጠበቅሁት በላይ ረዳኝ።,Positive,train
+AMIS0003,ሆስፒታሉ ሲያስፈልገኝ በቀላሉ አገኘሁት።,Positive,train
 ```
 
-The sentiment categories and numeric encodings must match the actual annotation scheme used in the dataset.
+The dataset uses four columns: `id` identifies each sentence, `text_am` contains the Amharic text, `sentiment_label` specifies the annotated sentiment category, and `split` indicates whether the record belongs to the training, validation, or testing partition. The examples above follow the provided dataset schema.
 
 ## 4. Repository Structure
 
